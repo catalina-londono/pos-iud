@@ -1,0 +1,21 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /api/v1
+
+spring:
+  application:
+    name: API POS IUD
+  datasource:
+    url: jdbc:mysql://localhost:3306/pos-iud?createDatabaseIfNotExist=true
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update #update, validate, create-drop, none
+    show-sql: true
+  # http://localhost:8084/api/v1/swagger-ui/index.html
+
+ventas:
+  IVA: 0.19
+

@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "579a2378-d93a-4d63-8e86-3803b38d3740",
+		"name": "POS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37986118"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "obtenerTodas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categorias",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Aseo\",\r\n    \"descripcion\": \"Productos de aseo para el hogar y otras superficies\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categorias",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/actuator",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"actuator"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080"
+		}
+	]
+}
